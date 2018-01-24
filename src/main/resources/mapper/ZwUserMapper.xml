@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhongwang.cloud.platform.service.organization.dao.ZwUserMapper">
+	<resultMap id="BaseResultMap" type="com.zhongwang.cloud.platform.service.organization.domain.ZwUser">
+		<id column="pkid" jdbcType="VARCHAR" property="pkid" />
+		<result column="mid" jdbcType="VARCHAR" property="mid" />
+		<result column="user_name" jdbcType="VARCHAR" property="userName" />
+		<result column="user_realm" jdbcType="VARCHAR" property="userRealm" />
+		<result column="user_realname" jdbcType="VARCHAR" property="userRealname" />
+		<result column="user_sex" jdbcType="CHAR" property="userSex" />
+		<result column="user_avatar" jdbcType="VARCHAR" property="userAvatar" />
+		<result column="user_organization" jdbcType="VARCHAR" property="userOrganization" />
+		<result column="user_password" jdbcType="VARCHAR" property="userPassword" />
+		<result column="user_password_salt" jdbcType="VARCHAR" property="userPasswordSalt" />
+	</resultMap>
+	<select id="selectZwUser" parameterType="com.zhongwang.cloud.platform.service.organization.domain.ZwUser" resultMap="BaseResultMap">
+		 SELECT * FROM ZW_USER
+	</select>
+</mapper>
